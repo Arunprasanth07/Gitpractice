@@ -1,0 +1,27 @@
+package TestNGTests;
+
+import org.testng.annotations.Test;
+
+public class Testngbasic {
+	public int a = 12 ;
+	public int b = 15;
+	
+	public int addition = a+b;
+	public int Subtract = a-b;
+	public int multiply = a*b;
+	
+	
+	@Test (priority = 0)
+	public void tc_one() {
+		System.out.println("This is test case one addition = " + addition);
+	}
+	@Test (priority = 1)
+	public void tc_two() {
+		System.out.println("This is test case one subtract = " + Subtract);
+	}
+	@Test (priority = 2)
+	public void tc_three() {
+		System.out.println("This is test case one multiply = " + multiply );
+	}
+	
+}

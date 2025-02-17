@@ -1,0 +1,21 @@
+package basicsjava;
+
+public class me extends Overriding {
+
+	@Override
+	public void car() {
+		System.out.println("Nope I won't buy an mercedes, I will get a bugatti");
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Overriding over = new me();
+		
+		over.achive();
+		over.car();
+	}
+
+}

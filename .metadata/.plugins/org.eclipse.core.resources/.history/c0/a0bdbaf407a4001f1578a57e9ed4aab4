@@ -1,0 +1,19 @@
+package Webauto;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Textbox {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("Webdriver.chrome.Driver", "C:\\Users\\prasa\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe" );
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.leafground.com/input.xhtml");
+		driver.findElement(By.name("j_idt88:name")).sendKeys("Arun Prasanth K");
+		
+	}
+
+}

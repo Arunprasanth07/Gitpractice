@@ -1,0 +1,58 @@
+package TestNGTests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class textBox_Test {
+
+		WebDriver d;
+		Long Timeon;
+		Long Timeoff;
+
+		@BeforeSuite
+		public void openbrowser() {
+		 Timeon = System.currentTimeMillis();
+			System.setProperty("Webdriver.chrome.Driver", "C:\\Users\\prasa\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe" );
+			 d = new ChromeDriver();
+		}
+			@Test 
+			public void entername() {
+			d.get("https://www.leafground.com/input.xhtml");
+			WebElement name =	d.findElement(By.name("j_idt88:name"));
+			name.sendKeys("Arun Prasanth K");
+			}
+			
+			@Test
+			public void addname() {
+			WebElement addtext =	d.findElement(By.xpath("//*[@id=\'j_idt88:j_idt91\']"));
+			addtext.sendKeys("Express");
+			}
+			
+			@Test
+			public void Printname() {
+			WebElement findtext = 	d.findElement(By.id("j_idt88:j_idt97"));
+			String value = findtext.getAttribute("value");
+			System.out.println(value);
+			}
+			
+			@Test (priority = 0)
+			public void clearname() {
+			WebElement cleardata =	d.findElement(By.id("j_idt88:j_idt95"));
+			cleardata.clear();
+			}
+			@AfterSuite
+			public void closebrowser() {
+				d.quit();
+			Timeoff = System.currentTimeMillis();
+				Long duration = Timeon - Timeoff;
+				System.out.println(duration);
+
+			}
+			
+			
+		}

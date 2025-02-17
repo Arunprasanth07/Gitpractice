@@ -1,0 +1,18 @@
+package webauto;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class OpenChrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Open chrome
+		// land on google search
+		
+		System.setProperty("Webdriver.chrome.driver","C:\\Users\\prasa\\Downloads\\chrome-win64\\chrome-win64\\chrome.exe");
+	 Webdriver driver = New ChromeDriver();
+	 driver.get("https://www.google.com/");
+	}
+
+}

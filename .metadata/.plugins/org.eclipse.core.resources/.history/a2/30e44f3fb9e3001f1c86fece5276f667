@@ -1,0 +1,52 @@
+package reCap;
+
+public class conditionalStatement extends looping {
+
+	Boolean rdj= false;
+
+	String bike;
+
+	public void moto(String bike) {
+		if(bike.equals("KTM")) {
+			System.out.println("Yor are thinking about KTM");
+		}	 else if (bike.equals("yamaha")) {
+			System.out.println("Yor are thinking about Yamaha");
+		}   else if (bike.equals("Aprilla")) {
+			System.out.println("Yor are thinking about Aprilla");
+		}   else if (bike.equals("RE")) {
+			System.out.println("Yor are thinking about RE");
+		}
+	}	
+
+	public void weird(int n){
+		if(n % 2 !=0){
+			System.out.println("Weird");
+		}else if(n>=2 && n<=5){
+			System.out.println("Not Weird");
+		} else {
+			System.out.println("Ahh shit here we go again");
+		}
+	}
+public static void main(String[] args) {
+
+	conditionalStatement hero = new conditionalStatement();
+
+	if(hero.rdj) {
+		System.out.println("I am Ironman");
+	}else {
+		System.out.println("I am Dr.doom");
+	}
+
+	conditionalStatement motorbike = new conditionalStatement();
+
+	motorbike.moto("yamaha");
+
+	motorbike.weird(9);
+}
+
+
+
+
+}
+
+

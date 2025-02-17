@@ -1,0 +1,18 @@
+package reCap;
+
+public class swapVariable {
+
+	static int i1 = 7 , i2 = 15;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("i1 is " + i1 + " i2 is " + i2);
+         i2 = i1+i2;
+         i1 = i2-i1;
+         i2 = i1-i2;
+
+         System.out.println("i1 is " + i1 + " i2 is " + -i2);
+		
+		
+	}
+
+}

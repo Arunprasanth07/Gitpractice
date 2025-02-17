@@ -1,0 +1,44 @@
+package Webauto;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Filedownload {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\prasa\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.leafground.com/file.xhtml");
+		
+		WebElement download = driver.findElement(By.xpath("//*[@id=\'j_idt93:j_idt95\']"));
+		Thread.sleep(4000);
+		download.click();
+		Thread.sleep(4000);
+		
+		File file = new File("C:\\Users\\prasa\\Downloads");
+		
+		File[] item = file.listFiles();
+		
+		for (File file2 : item) {
+			if(file2.getName().equals("TestLeaf Logo.png")) {
+				System.out.println("File present in the folder");
+				break;
+			}
+			else {
+				System.out.println("File is not in the folder");
+			}
+		}
+		
+		
+		
+		
+		
+	}
+	
+
+}

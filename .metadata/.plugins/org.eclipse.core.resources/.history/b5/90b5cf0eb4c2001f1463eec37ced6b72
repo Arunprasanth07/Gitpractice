@@ -1,0 +1,15 @@
+package basicsjava;
+
+
+public class Bmw extends Polymorphism {
+	
+	
+	public static void main(String[] args) {
+		
+		Polymorphism poly = new Bmw();
+		
+		poly.topendbm();
+		
+	}
+
+}

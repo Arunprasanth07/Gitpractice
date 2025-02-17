@@ -1,0 +1,30 @@
+package basicsjava;
+
+public class Polymorphism {
+
+	public void topend(Bmw powerhouse) {
+		System.out.println("The powerhouse of Beemer is M8");
+	}
+	public void topend(Benz powerhouse) {
+		System.out.println("The powerhouse of Benz is AMG One");
+	}
+		public void topend(Audi powerhouse) {
+			System.out.println("The powerhouse of Audi is RS Q8");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Polymorphism ex = new Polymorphism();
+		Bmw Bmw = new Bmw();
+		ex.topend(Bmw);
+		
+		Audi Audi = new Audi();
+		ex.topend(Audi);
+		
+		Benz Benz = new Benz();
+		ex.topend(Benz);
+		
+	}
+
+}
